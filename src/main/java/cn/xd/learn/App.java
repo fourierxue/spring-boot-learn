@@ -1,5 +1,6 @@
 package cn.xd.learn;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,8 +18,9 @@ import java.util.Map;
 
 /**
  * Hello world!
- *
+ * @MapperScan 批量扫描，被扫描到的包中的mapper可以不需要添加@Mapper注解
  */
+@MapperScan(value = "cn.xd.learn.mapper")
 @SpringBootApplication
 public class App 
 {

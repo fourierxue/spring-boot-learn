@@ -86,7 +86,7 @@ public class AppTest
     public void testDataSource() throws SQLException {
         log.info("datasource:{}", dataSource.getClass());
         Connection con = dataSource.getConnection();
-        con.close();
         log.info("connection:{}", con);
+        con.close();
     }
 }

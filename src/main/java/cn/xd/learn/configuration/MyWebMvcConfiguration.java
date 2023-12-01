@@ -28,6 +28,7 @@ public class MyWebMvcConfiguration implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new AuthHandlerInterceptor())
                 .addPathPatterns("/**")
-                .excludePathPatterns("/learn/**");
+                .excludePathPatterns("/learn/**")
+                .excludePathPatterns("/druid/**");
     }
 }
