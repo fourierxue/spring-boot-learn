@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "my.uuid",
+      "type": "java.lang.String",
+      "description": "Description for my.uuid."
+    },
+    {
+      "name": "my.map.key1",
+      "type": "java.lang.String",
+      "description": "Description for my.map.key1."
+    },
+    {
+      "name": "my.map.key2",
+      "type": "java.lang.String",
+      "description": "Description for my.map.key2."
+    }
+  ] }

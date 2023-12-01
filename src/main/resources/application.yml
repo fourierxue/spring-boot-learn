@@ -1,0 +1,39 @@
+server:
+  port: 8088
+  # :后面制定默认值
+  description: server port is ${server.port}, tomcat port is ${tomcat.port:Unknown}
+
+spring:
+  messages:
+    basename: i18n/default
+  datasource:
+    username: root
+    password: SpnDb0914
+    url: jdbc:mysql://180.76.181.25:3306/springboot
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+# 随机值，启动时确定，重启才会变动
+my:
+  uuid: ${random.uuid}
+  last-name: xue
+  first-name: dong
+  birthday: 2023/11/10
+  books:
+    - chinese
+    - english
+  language: [java, c++]
+  map:
+    key1: value1
+    key2: value2
+  inner-line-map: {k1: v1, k2: v2}
+  pet:
+    name: mimi
+    age: 2
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: auditevents
+
