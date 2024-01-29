@@ -51,3 +51,8 @@ management:
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/mapper/*.xml
+
+xd:
+  hello:
+    prefix: hello-
+    postfix: -you ara coming
