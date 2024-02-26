@@ -16,16 +16,15 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 @EnableMethodSecurity
 public class ActuatorSecurityAdapter {
-    @Bean
+    //@Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
-        httpSecurity.formLogin().and().authorizeRequests().anyM
-                /**csrf(AbstractHttpConfigurer::disable)
+        httpSecurity.formLogin().and().authorizeRequests()
+                .and().csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(authorize -> {
                     authorize.requestMatchers("/actuator/*").authenticated();
                 })
                 .httpBasic(Customizer.withDefaults())
                 .formLogin(Customizer.withDefaults());
-                 **/
         return httpSecurity.build();
     }
 }
